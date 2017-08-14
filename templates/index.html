@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Thermos - Welcome{% endblock %} {% block content %}
+<article>
+    <header>
+        <h1>Welcome</h1>
+        <p>Thermos is a simple social bookmarking site. Or actually, it is a demo for the <a href="#">Pluralsight</a> course
+            titled <i>Flask Fundamentals.</i></p>
+    </header>
+    <section>
+        <h2>Recently Added</h2>
+        {% if new_bookmarks %}
+        <ul>
+            {% for bm in new_bookmarks %}
+            <li>{{ bm.user }} added <a href="{{ bm.url }}">{{ bm.url }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %} No bookmarks yet. {% endif %}
+    </section>
+    
+    <section>
+        <h2>articles section h2</h2>
+        <p>i hope you do work</p>
+    </section>
+
+</article>
+{% endblock %}
